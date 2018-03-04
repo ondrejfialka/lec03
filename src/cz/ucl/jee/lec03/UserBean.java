@@ -1,12 +1,13 @@
 package cz.ucl.jee.lec03;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 
-@ManagedBean(name="user")
+@Named("user")
 @SessionScoped
-public class UserBean{
+public class UserBean implements Serializable {
 
 	@Pattern(regexp="[a-z]*", message="{user.namePattern}")
 	private String username;

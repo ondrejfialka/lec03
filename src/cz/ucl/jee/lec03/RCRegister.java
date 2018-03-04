@@ -1,12 +1,11 @@
 package cz.ucl.jee.lec03;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
-
-@ManagedBean
+@Named
 @ApplicationScoped
 public class RCRegister {
 	private List<RodneCislo> rcList;
